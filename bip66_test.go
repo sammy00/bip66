@@ -1,14 +1,21 @@
 package bip66_test
 
 import (
+	"flag"
 	"testing"
 
 	"github.com/sammy00/bip66"
 )
 
+var update = flag.Bool("update", false, "update golden files")
+
 func TestIsValidSignatureEncoding(t *testing.T) {
-	var testCases []*bip66.Goldie
-	bip66.ReadGoldenJSON(t, &testCases)
+	if *update {
+		UpdateGoldenJSON(t)
+	}
+
+	var testCases []*Goldie
+	ReadGoldenJSON(t, &testCases)
 
 	for i, c := range testCases {
 		// append the dummy sighash flag
