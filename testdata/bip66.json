@@ -1,0 +1,77 @@
+[
+  {
+    "description": "valid signature.",
+    "signature": "304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": true
+  },
+  {
+    "description": "bad magic.",
+    "signature": "314402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "bad 1st int marker magic.",
+    "signature": "304403204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "bad 2nd int marker.",
+    "signature": "304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410320181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "short len",
+    "signature": "304302204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "long len",
+    "signature": "304502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "long X",
+    "signature": "304402424e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "long Y",
+    "signature": "304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410221181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "short Y",
+    "signature": "304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410219181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "X == N ",
+    "signature": "30440220fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd03641410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "Y == N",
+    "signature": "304402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141",
+    "valid": false
+  },
+  {
+    "description": "0 len X.",
+    "signature": "302402000220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "0 len Y.",
+    "signature": "302402204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410200",
+    "valid": false
+  },
+  {
+    "description": "extra R padding.",
+    "signature": "30450221004e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd410220181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  },
+  {
+    "description": "extra S padding.",
+    "signature": "304502204e45e16932b8af514961a1d3a1a25fdf3f4f7732e9d624c6c61548ab5fb8cd41022100181522ec8eca07de4860a4acdd12909d831cc56cbbac4622082221a8768d1d09",
+    "valid": false
+  }
+]
